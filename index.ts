@@ -1,6 +1,12 @@
 // Test import
 import func from './test';
 
+/******************************************************************
+ *                                                                 *
+ *                           VARIABLES                             *
+ *                                                                 *
+ *******************************************************************/
+
 // Assign types to variables by assigning value
 let num1 = 24; // <-- We can't re-assign this variable with values of different type like string or boolean
 let str1 = 'string only';
@@ -26,6 +32,12 @@ let MyName: 'Mario' | 'Ranja';
 // Using inion
 let numOrStr: number | string; // <-- This variable can only contain number or string
 
+/******************************************************************
+ *                                                                 *
+ *                           ARRAYS                                *
+ *                                                                 *
+ *******************************************************************/
+
 // Assign types to arrays
 // Method 1
 let arrNum: number[];
@@ -43,7 +55,12 @@ let arrAny2: Array<any>;
 let arrNumOrStr: (number | string)[];
 let arrNumOrStr2: Array<number | boolean>;
 
-// Object
+/******************************************************************
+ *                                                                 *
+ *                           OBJECTS                               *
+ *                                                                 *
+ *******************************************************************/
+
 // Interface is a structure that defines the syntax for object to follow
 interface User {
   id: number;
@@ -60,7 +77,12 @@ let user1: User = {
   isActive: true,
 };
 
-// Classes
+/******************************************************************
+ *                                                                 *
+ *                           CLASSES                               *
+ *                                                                 *
+ *******************************************************************/
+
 // When using the class keyword in TypeScript, you are actually creating two things with the same identifier:
 //     A TypeScript interface containing all the instance methods and properties of the class; (Felds)
 //     A JavaScript variable with a different (anonymous) constructor function type
@@ -89,6 +111,12 @@ singer1.age = 24;
 singer1.isAlive = false;
 console.log(singer1);
 
+/******************************************************************
+ *                                                                 *
+ *                           FUNCTIONS                             *
+ *                                                                 *
+ *******************************************************************/
+
 // Function
 const sayMyName = (name: string): void => {
   console.log(`Hello ${name}`);
@@ -109,6 +137,12 @@ const helloWorld = (name?: string): string => {
   }
   return `Hello world`;
 };
+
+/******************************************************************
+ *                                                                 *
+ *                        TUPLES AND ENUMS                         *
+ *                                                                 *
+ *******************************************************************/
 
 // Tuples: fixed lengths arrays, and each element can have a different type
 // Enums: create a collection of object that we can use by name
@@ -133,6 +167,12 @@ const person1: Person = {
   tasks: ['dev', 6],
   role: Role.ADMIN,
 };
+
+/******************************************************************
+ *                                                                 *
+ *                            PROMISES                             *
+ *                                                                 *
+ *******************************************************************/
 
 // Promise
 // we can provide the data type of the value returned when promise fulfills.
